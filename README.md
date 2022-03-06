@@ -21,10 +21,10 @@ Text-to-Text Transformer**](https://arxiv.org/pdf/1910.10683.pdf))
  - I mean there is plenty options to experiment on, for instance:
    -  how to improve generations of mathematical formulas...
    -  if we predict any tags from text with high precision and recall:
-     - could we predict the tags also for generated texts which could result in new metrics ?
-     - could we also annotate tags for generated text and predict whether generated text is linguisticly correct to send it into production ?
-     - detect when we actually can generate from draft ? 
-   - how would generation behave if we even split drafts into smaller pieces generate separately and concatenate results...
+      - could we predict the tags also for generated texts which could result in new metrics ?
+      - could we also annotate tags for generated text and predict whether generated text is linguisticly correct to send it into production ?
+      - detect when we actually can generate from draft ? 
+      -  how would generation behave if we even split drafts into smaller pieces generate separately and concatenate results...
   
 
 
