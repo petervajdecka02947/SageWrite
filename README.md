@@ -9,7 +9,7 @@ Text-to-Text Transformer**](https://arxiv.org/pdf/1910.10683.pdf))
    - categarical variables were transformed into binomial 
    - for text columns token counts were added
    - drafts with too short texts were removed such as "skiped",etc 
- - by reading  [**The GEM Benchmark: Natural Language Generation, its Evaluation and Metrics**](https://arxiv.org/pdf/2102.01672.pdf), **Rouge score** and **Bert Score** has been choosen for evaluation, however WER(word error rate), which uses edit distance could be also considered
+ - by reading  [**The GEM Benchmark: Natural Language Generation, its Evaluation and Metrics**](https://arxiv.org/pdf/2102.01672.pdf), **Rouge score** has been choosen for evaluation, however BertScore and WER(word error rate), which uses edit distance could be also considered
  - T5 fine-tunning applying train and dev data (script [**2.T5.ipynb**](https://github.com/petervajdecka02947/SageWrite/blob/main/2.T5.ipynb) -> functions  [**t5.py**](https://github.com/petervajdecka02947/SageWrite/blob/main/utils/t5.py))
    - basically, I just choose T5 model (usually different in number of weights and way they are trained) and fine tune on our training data while comporing training loss (train data) and validation loss(dev data)  
    - train epoch increase untill validation loss improved. If not, fine-tunning is done.
