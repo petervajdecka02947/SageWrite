@@ -1,5 +1,4 @@
 huggingface-hub==0.1.1
-nltk==3.6.5
 pandas==1.3.4
 pytorch-lightning==1.4.5
 regex
