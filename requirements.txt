@@ -5,4 +5,3 @@ fastapi
 uvicorn==0.16.0
 pydantic
 google-cloud-storage
-
