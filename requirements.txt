@@ -14,7 +14,6 @@ transformers==4.10.0
 fastapi
 uvicorn==0.16.0
 pydantic
-urllib.request
 google-cloud-storage
 zipfile
 os
