@@ -77,7 +77,7 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 lightning_logs/*
-Data/*
+Data/Models/*
 
 # IPython
 profile_default/
