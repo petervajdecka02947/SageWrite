@@ -1,10 +1,25 @@
 from fastapi import FastAPI
 import json
 import uvicorn
-from app.utils.prod import SimpleT5
+from utils.prod import SimpleT5
+from google.cloud import storage
+import zipfile
+import os
 
-CONFIG_PATH = "./app/sidecard/config.json"
+CONFIG_PATH = "./app/sidecards/config.json"
+BUCKET = "sagewrite"
+credentials_dir = "./app/sidecards/sagewrite.json"
+name = "model.zip"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentials_dir
 
+storage_client = storage.Client()
+bucket = storage_client.get_bucket(BUCKET)
+blob = bucket.blob(str(name))
+blob.download_to_filename(str(name))
+
+with zipfile.ZipFile("model.zip", 'r') as zip_ref:
+    zip_ref.extractall("model")
+    
 with open(CONFIG_PATH) as f:
     config = json.load(f)
 
